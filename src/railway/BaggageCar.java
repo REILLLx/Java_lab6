@@ -6,6 +6,13 @@ package railway;
 public class BaggageCar extends RollingStock {
     private final int baggageCapacity;
 
+    /**
+     * Конструктор для створення багажного вагона.
+     *
+     * @param comfortLevel    Рівень комфортності (від 1 до 5).
+     * @param baggageCapacity Максимальна кількість багажу, яку можна розмістити у вагоні.
+     * @throws IllegalArgumentException якщо місткість багажу є від'ємною.
+     */
     public BaggageCar(int comfortLevel, int baggageCapacity) {
         super("Багажний вагон", comfortLevel);
         if (baggageCapacity < 0) {

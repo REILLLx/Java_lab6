@@ -7,6 +7,14 @@ public class PassengerCar extends RollingStock {
     private final int passengerCapacity;
     private final int baggageCapacity;
 
+    /**
+     * Конструктор для створення пасажирського вагона.
+     *
+     * @param comfortLevel      Рівень комфортності (від 1 до 5).
+     * @param passengerCapacity Кількість пасажирів, які можуть розміститися у вагоні.
+     * @param baggageCapacity   Максимальна кількість багажу, яку можна розмістити у вагоні.
+     * @throws IllegalArgumentException якщо місткість пасажирів або багажу є від'ємною.
+     */
     public PassengerCar(int comfortLevel, int passengerCapacity, int baggageCapacity) {
         super("Пасажирський вагон", comfortLevel);
         if (passengerCapacity < 0 || baggageCapacity < 0) {
